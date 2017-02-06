@@ -1,0 +1,115 @@
+/*index.css*/
+
+/*轮播图片*/
+#index-banner{position: relative;height: 460px;overflow: hidden;}
+#index-banner ul{width: 100px;height: 20px;position: absolute;left: 50%;bottom: 12px;transform: translateX(-50%);z-index: 4;}
+#index-banner ul li{width: 10px;height: 10px;border-radius: 50%;background-color: #fff;margin-right: 11px;display: inline-block;}
+#index-banner ul li.on{background-color: #333;}
+#banner-list a{position: absolute;}
+
+/*课程介绍*/
+.index-intro{height: 297px;width: 100%;background-color: #fff;}
+.index-intro li{width: 340px;float: left;margin-top: 45px;}
+.index-intro .intro{margin-left: 100px;}
+.index-intro .intro h1{font-size: 21px;line-height: 48px;color: #333;font-weight: normal;}
+.index-intro .intro p{font-size: 14px;line-height: 24px;color: #666;}
+.index-intro .intro a{font-size: 14px;line-height: 80px;}
+.index-intro .intro a:hover,.header-remind a:hover,.public-footer a:hover{text-decoration: underline;}
+.index-intro .item1{margin-left: 10px;}
+.index-intro .icon1{width: 80px;height: 80px;background-image: url(../img/intro1.png);background-repeat: no-repeat;float: left;margin-top: 22px;}
+.index-intro .item2{margin-left: 84px;}
+.index-intro .icon2{width: 80px;height: 80px;background-image: url(../img/intro2.png);background-repeat: no-repeat;float: left;margin-top: 22px;}
+.index-intro .item3{margin-left: 82px;}
+.index-intro .icon3{width: 80px;height: 80px;background-image: url(../img/intro3.png);background-repeat: no-repeat;float: left;margin-top: 22px;}
+
+/*图片滚动*/
+#index-roll{background: #fff;overflow:hidden;width: 100%;}
+#index-roll a img{margin-left: -4px;border: 2px solid #f8f8f8;}
+#index-roll .img5 img{transform: translateX(-2px);}
+#roll-box{float: left;width: 1000%}
+#box1{float: left;}
+#box2{margin-left: 3px;float: left;}
+
+/*内容区*/
+.index-main{background: #f8f8f8;height: 1545px;width: 100%;}
+.course-left{float: left;}
+.course-right{float: right;}
+.course-tab{padding-top: 75px;}
+.course-tab div{float: left;width: 200px;height: 50px;background: #fff;box-shadow: 1px 2px 1px #ccc;cursor: pointer;color: #666;}
+.course-tab h1{font-size: 20px;line-height: 50px;font-weight: normal;text-align: center;}
+.course-tab .tab-checked{background: #39a030;color: #fff;}
+/*课程内容*/
+.course-content{height: 1240px;width: 980px;padding-top: 78px;}
+.course-content li{width: 222px;margin: 0 20px 19px 0;display: inline-block;background-color: #fff;box-sizing: border-box;border: 1px solid #f1f1f1;border-top: 1px solid transparent;box-shadow: 0 1px 5px #f1f1f1;position: relative;}
+.course-contentI .course{position: relative;z-index: 1;}
+.course-contentI .contentI-img{height: 124px;box-sizing: border-box;border: 1px solid #fff;}
+.contentI-img img{width: 218px;height: 123px;}
+.contentI-txtBox{padding: 0 6px 6px;}
+.contentI-txtBox .contentI-tit{font-size: 12px;white-space: nowrap;text-overflow: ellipsis;overflow: hidden;margin: 6px 0;font-weight: inherit;color: #5a5a5a;}
+.contentI-txtBox .contentI-author{font-size: 12px;color: #999;font-weight: inherit;margin-bottom: 8px;}
+.contentI-txtBox .span-1{background-image: url(../img/icon.png);background-repeat: no-repeat;background-position: 3px 3px;}
+.contentI-txtBox .span-1{display: inline-block;height: 18px;border: 1px solid #ddd;border-radius: 2px;font-size: 8px;color: #ddd;text-indent: 15px;padding-right: 4px;}
+.contentI-txtBox .span-2{display: block;color: #ff3f00;margin-top: 10px;font-size: 11px;}
+.contentI-txtBox span i{font-style: inherit;margin-left: 1px;}
+.course-content li:hover,.hot-chart:hover,.video-intro:hover{box-shadow: 1px 1px #dedcdc;}
+.course-content h3:hover{color: #39a030;}
+.course-hover{position: absolute;left: -10px;top: -10px;width: 475px;height: 244px;z-index: 2;box-sizing: border-box;border: 1px solid #d4d3d3;box-shadow: 2px 2px 2px #d4d3d3;display: none;}
+.course-hover-top{height: 124px;background: #fff;color: #666;padding: 10px 20px 20px 10px;}
+.course-hover .course-hover-img{width: 218px;height: 123px;overflow: hidden;float: left;}
+.course-hover-top img{width: 218px;height: 123px;margin-right: 20px;display: inline-block;}
+.course-hover-top h3{white-space: nowrap;text-overflow: ellipsis;font-size: 18px;color: #333;overflow: hidden;font-weight: inherit;}
+.course-hover-top dl{display: inline-block;float: right;margin-top: 3px;width: 204px;font-size: 12px;}
+.course-hover-top dt{margin: 10px 0;}
+.course-hover-top dd{margin: 0 0 5px 0;}
+.course-hover-top dl dt p{background-image: url(../img/icon.png);background-repeat: no-repeat;text-indent: 15px;background-position: 0 3px;}
+.course-hover-top p span{margin-right: 4px;}
+.course-hover-txt{padding: 20px 30px 20px 20px;height: 48px;background: #f8f8f8;}
+.course-hover-txt{font-size: 14px;color: #666;line-height: 24px;overflow: hidden;width: 422px;}
+.course-hover-txt p{white-space: inherit;text-overflow: ellipsis;overflow: hidden;height: 52px;}
+/*页码*/
+.page{float: right;height: 20px;line-height: 20px;margin: 20px 32px 0 0;text-align: center;}
+.page div{height: 20px;width: 29px;color: #fff;background-color: #9dd8b1;}
+.page div,
+.page li{display: inline-block;float: left;cursor: pointer;font-size: 11px;}
+.page li{width: 20px;height: 20px;color: #666;margin: 0 4px;}
+.page .active-page{color: #39A030;}
+.page li:hover{color: #fff;background-color: #9dd8b1;}
+/*视频介绍*/
+.video-intro .title{width: 223px;height: 55px;background: #fff;border-right: 1px solid #ecebeb;border-bottom: 1px solid #ddd;border-left: 1px solid #ecebeb;text-indent: 20px;margin-top: 78px;}
+.video-intro .title h2{color: #494949;font-size: 16px;font-weight: inherit;line-height: 55px;}
+.video-intro .content{width: 223px;height: 159px;background: #fff;border-right: 1px solid #ecebeb;border-bottom: 1px solid #d4d3d3;border-left: 1px solid #ecebeb;padding-top: 14px;}
+.video-intro .content p{color: #666;font-size: 14px;line-height: 26px;text-align: center;}
+.video-play img{transform: translateX(22px);cursor: pointer;}
+/*热门排行*/
+.hot-chart .title{width: 223px;height: 56px;background: #fff;border-right: 1px solid #eee;border-bottom: 1px solid #eee;border-left: 1px solid #eee;text-indent: 20px;margin-top: 20px;}
+.hot-chart .title h2{color: #494949;font-size: 16px;font-weight: inherit;line-height: 56px;}
+.hot-chart .content{width: 183px;height: 700px;background: #fff;border-right: 1px solid #ecebeb;border-bottom: 1px solid #d4d3d3;border-left: 1px solid #ecebeb;padding: 19px 20px 0 20px;overflow: hidden;}
+.hot-chart .contentI{width: 183px;height: 50px;padding-bottom: 20px;overflow: hidden;transition: 200ms margin;}
+.hot-chart .contentI a{color: #666;}
+.side-img{float: left;width: 50px;height: 50px;}
+.side-txtBox{float: right;width: 121px;}
+.side-txtBox-tit{overflow: hidden;text-overflow: ellipsis;white-space: nowrap;font-size: 14px;line-height: 14px;font-weight: inherit;}
+.side-txtBox-num{line-height: 36px;font-size: 9px;color: #999;}
+.side-txtBox-icon{display: inline-block;width: 9px;height: 10px;background-image: url(../img/icon.png);background-repeat: no-repeat;transform: translateY(1px);margin-right: 2px;}
+
+/*遮蔽层*/
+.cover-layer1,.cover-layer2{width: 100%;height: 100%;position: fixed;left: 0;top: 0;background-color: rgba(0, 0, 0, 0.7);display: none;z-index: 999;}
+
+/*视频*/
+.win-video{width: 930px;height: 600px;margin: 0 auto;background-color: #fff;transform: translateY(65px);}
+.win-video h1{color: #444;font-size: 18px;font-weight: inherit;margin-bottom: 15px;text-indent: 20px;transform: translateY(15px);}
+#videoPlay{width: 890px;height: 538px;margin: 0 auto;transform: translateX(20px);}
+.win-off1{transform: translateY(-30px);width: 16px;height: 16px;background-image: url(../img/close2.png);background-repeat: no-repeat;cursor: pointer;float: right;}
+
+/*登录*/
+.login-win{width: 296px;height: 208px;background-color: #fff;margin: 0 auto;padding: 20px 53px 40px 40px;transform: translateY(200px);}
+.login-win h1{color: #444;font-size: 18px;margin-bottom: 15px;}
+.login-win .username,.login-win .password{border: 1px solid #dfdfdf;box-sizing: border-box;width: 293px;height: 45px;background-color: #fafafa;margin-bottom: 15px;}
+.login-win .form-div{border-top: 2px solid #f1f1f1;border-left: 2px solid #f1f1f1;}
+.login-win label{display: inline-block;width: 42px;text-indent: 10px;color: #ccc;font-size: 16px;border: none;text-align: center;vertical-align: middle;}
+.login-win input{line-height: 38px;height: 39px;width: 241px;border: none;font-size: 14px;color: #666;text-indent: 4px;outline: 0;background-color: #fafafa;vertical-align: middle;}
+.login-win .submit{border: none;background-color: #fff;}
+.login-win #submit{width: 295px;height: 48px;color: #fff;font-size: 16px;background-image: url(../img/login.png);background-repeat: no-repeat;text-align: center;line-height: 48px;cursor: default;}
+.login-win .password{margin-bottom: 25px;}
+.login-win p{color: #e61313;margin-top: 6px;font-size: 12px;}
+.win-off2{transform: translate(52px,-230px);width: 16px;height: 16px;background-image: url(../img/close2.png);background-repeat: no-repeat;cursor: pointer;float: right;}

@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>网易教育产品部</title>
+	<link rel="stylesheet" type="text/css" href="css/reset.css"/>
+	<link rel="stylesheet" type="text/css" href="css/common.css"/>
+	<link rel="stylesheet" type="text/css" href="css/index.css"/>
+	<link id="minW" rel="stylesheet" type="text/css" href="" />
+	<script type="text/javascript" src="js/carousel.js"></script>
+	<script type="text/javascript" src="js/main.js"></script>
+	<script type="text/javascript" language="javascript">
+		window.onload=function(){
+			carousel.scroll(3,"banner-list","list","banner-info");
+		}
+	</script>
+</head>
+<body>
+	<!-- 顶部提示 -->
+	<div class="header-remind" id="remind">
+	    <div class="public-container clearfloat">
+	    	<p>网易云课堂微专业，帮助你掌握专业技能，令你求职获加薪多一份独特优势!
+	    	<a href="http://study.163.com/smartSpec/intro.htm#/smartSpecIntro">立即查看&gt;</a></p>
+	    	<div class="remind-off" id="remind-off"><i></i>不再提示</div>
+	    </div>
+	</div>
+	<script type="text/javascript">
+    	//关闭顶部提醒
+		var noMoreTip = (function(){
+			var noticeArea = document.querySelector(".header-remind");
+        	var noticeCloseBtn = noticeArea.querySelector(".remind-off");
+        	noticeCloseBtn.addEventListener("click",function(){
+            	noticeArea.style.display = "none";
+        	});
+		})();
+	</script>
+	<!-- 头部区 -->
+	<div class="public-header">
+		<div class="public-container clearfloat">
+			<div class="header-logo">
+				<i></i>
+				<h1><span>|</span>网易教育产品部</h1>
+			</div>
+			<div class="attention">
+				<div class="a-off" id="a-off" onclick="loginOpen()">
+					<i>+</i>关注
+				</div>
+				<div class="a-on" id="a-on">
+					<span></span>已关注
+					<i>|</i>
+					<a href="#" id="cancel" onclick="cancel()">取消</a>
+				</div>
+				<div class="a-fans">
+					粉丝<span>45</span>
+				</div>
+			</div>
+			<ul class="header-nav clearfloat">
+				<li class="item"><a href="http://open.163.com/" target="_blank">网易公开课</a></li>
+				<li class="item"><a href="http://study.163.com/" target="_blank">云课堂</a></li>
+				<li class="item"><a href="http://www.icourse163.org/" target="_blank">中国大学MOOC</a></li>
+			</ul>
+			<div class="header-search"><a href="#"><span></span></a></div>
+		</div>
+	</div>
+	<!-- 轮播图 -->
+	<div id="index-banner">
+		<a href="#" id="banner-info"></a>
+		<ul id="list"></ul>
+		<div id="banner-list">
+			<a href="http://open.163.com/" target="_blank"><img src="img/banner1.jpg" alt="网易公开课" /></a>
+			<a href="http://study.163.com/" target="_blank"><img src="img/banner2.jpg" alt="网易云课堂" /></a>
+            <a href="http://www.icourse163.org/" target="_blank"><img src="img/banner3.jpg" alt="中国大学MOOC" /></a>
+		</div>
+	</div>
+	<!-- 课程介绍 -->
+	<div class="index-intro">
+		<div class="public-container clearfloat">
+			<ul>
+				<li class="item1">
+					<div class="icon1"></div>
+					<div class="intro">
+						<h1>网易公开课</h1>
+						<p>推出国内外名校公开课，涉及广泛的学科，名校老师认真讲解深度剖析，网易视频公开课频道搭建起强有力的网络视频教学平台。</p>
+						<span><a href="http://open.163.com/" target="_blank">了解更多 &gt;</a></span>
+					</div>
+				</li>
+				<li class="item2">
+					<div class="icon2"></div>
+					<div class="intro">
+						<h1>云课堂</h1>
+						<p>网易旗下大型在线学习平台，该平台面向学习者提供海量免费、优质课程,创新的个性化学习体验，自由开放的交流互动环境。</p>
+						<span><a href="http://study.163.com/" target="_self">了解更多 &gt;</a></span>
+					</div>
+				</li>
+				<li class="item3">
+					<div class="icon3"></div>
+					<div class="intro">
+						<h1>中国大学MOOC</h1>
+						<p>是爱课程网携手云课堂打造的在线学习平台，每一个有提升愿望的人,都可以在这里学习中国最好的大学课程，学完还能获得认证证书。</p>
+						<span><a href="http://www.icourse163.org/" target="_blank">了解更多 &gt;</a></span>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<!-- 图片滚动 -->
+	<div id="index-roll"> 
+		<div id="roll-box"> 
+			<div id="box1"> 
+				<a href="#"><img src="img/roll1.png"/></a> 
+				<a href="#"><img src="img/roll2.png"/></a> 
+				<a href="#"><img src="img/roll3.png"/></a> 
+				<a href="#"><img src="img/roll4.png"/></a> 
+				<a class="img5" href="#"><img src="img/roll5.png"/></a> 
+			</div> 
+			<div id="box2"></div> 
+		</div> 
+	</div>
+	<script type="text/javascript">
+	    //图片滚动的js 
+		var speed=10; 
+		var tab=document.getElementById("index-roll"); 
+		var tab1=document.getElementById("box1"); 
+		var tab2=document.getElementById("box2"); 
+		tab2.innerHTML=tab1.innerHTML; 
+		function Marquee(){
+			if(tab2.offsetWidth-tab.scrollLeft<=0)
+				tab.scrollLeft-=tab1.offsetWidth
+			else{
+				tab.scrollLeft++;
+			}
+		} 
+		var MyMar=setInterval(Marquee,speed); 
+		tab.onmouseover=function(){clearInterval(MyMar)}; 
+		tab.onmouseout=function(){MyMar=setInterval(Marquee,speed)}; 
+	</script>
+	<!-- 内容区 -->
+	<div class="index-main">
+		<div class="public-container clearfloat">
+			<div class="course-left">
+				<div class="course-tab" id="courseTab">
+					<div class="tab-checked" id="tab1">
+						<h1>产品设计</h1>
+					</div>
+					<div class="tab" id="tab2">
+						<h1>编程语言</h1>
+					</div>
+				</div>
+				<ul class="course-content" id="mainContent"></ul>
+				<div class="page" id="page">
+					<ul>
+						<div class="page-up" id="page-up">&lt;</div>
+						<li>1</li>
+						<li>2</li>
+						<li>3</li>
+						<li>4</li>
+						<li>5</li>
+						<div class="page-down" id="page-down">&gt;</div>
+					</ul>
+				</div>
+			</div>
+			<div class="course-right">
+				<div class="video-intro">
+					<div class="title">
+						<h2>机构介绍</h2>
+					</div>
+					<div class="content">
+						<p>观看下面的视频来了解吧：</p>
+						<div class="video-play" id="video-play">
+							<img src="img/video.jpg" alt="网易云课堂介绍视频" onclick="coverOpen()">
+						</div>
+					</div>
+				</div>
+				<div class="hot-chart">
+					<div class="title">
+						<h2>最热排行</h2>
+					</div>
+					<ul class="content" id="sideContent"></ul>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript">
+		//窗口关闭视频停止播放
+		function coverOff() {
+			document.getElementById("bg1").style.display ="none";
+			document.getElementById("videoPlay").src="";
+		}
+		//窗口弹出并播放视频
+		function coverOpen() {
+			document.getElementById("bg1").style.display ="block";
+			document.getElementById("videoPlay").src="http://mov.bn.netease.com/open-movie/nos/mp4/2014/12/30/SADQ86F5S_shd.mp4";
+		}
+	</script> 
+	<!-- 底部区  -->
+	<div class="public-footer">
+		<div class="public-container clearfloat">
+			<div class="footer-col1">
+				<div class="footer-logo">
+					<i></i>
+				    <h1><span>|</span>网易教育产品部</h1>
+				</div>
+				<p>&copy;2014 icourse163.org 浙ICP备08114786号-1</p>
+				<p>icourses.cn 京ICP备12020869号-2 京公网安备110102000459-2</p>
+			</div>
+			<div class="footer-col2">
+				<div class="friendlink">
+					<p class="footer-txt">友情链接：</p>
+					<p><a href="http://open.163.com/">网易公开课</a></p>
+					<p><a href="http://study.163.com/">网易云课堂</a></p>
+					<p><a href="http://www.icourse163.org/">中国大学MOOC</a></p>
+				</div>
+			</div>
+			<div class="footer-col3">
+				<div class="aboutus">
+					<p class="footer-txt">我们：</p>
+					<p><a href="#">关于</a></p>
+					<p><a href="#">联系</a></p>
+					<p><a href="#">关注<span class="weibo"></span></a></p>
+				</div>
+			</div>
+			<div class="footer-col4">
+				<div class="more">
+					<p class="footer-txt">更多：</p>
+					<p><a href="#">常见问题</a></p>
+					<p><a href="#">意见反馈</a></p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- 遮罩 -->
+	<div class="cover-layer1" id="bg1">
+		<!-- 弹窗视频 -->
+		<div class="win-video" id="video">
+			<h1>请观看下面的视频</h1>
+			<video id="videoPlay" controls="controls" preload="auto" autoplay>
+				<source src="" type="video/mp4" />
+			</video>
+			<div class="win-off1" id="video-off" onclick="coverOff()"></div>
+		</div>
+	</div>
+	<div class="cover-layer2" id="bg2">
+		<!--登录弹窗开始-->
+		<div class="login-win" id="login">
+			<h1>登录网易云课堂</h1>
+			<form id="form">
+				<div class="username">
+					<div class="form-div">
+						<label for="userName">账号</label>
+						<input type="text" id="userName" name="userName" value="" placeholder="请输入用户名" />
+					</div>
+				</div>
+				<div class="password">
+					<div class="form-div">
+						<label for="password">密码</label>
+						<input type="password" name="password" id="password" placeholder="请输入密码" />
+					</div>
+					<p id="prompt"></p>
+				</div>
+				<div class="submit">
+					<div id="submit">登 录</div>
+				</div>
+			</form>
+			<div class="win-off2" id="login-off" onclick="closeWin()"></div>
+		</div>
+	</div>
+	<script type="text/javascript">
+		//登录显示已关注
+		var oSubmit=document.getElementById('submit');
+		oSubmit.onclick=function(){
+			var oPromt=document.getElementById('prompt');
+			if(userName.value =='studyOnline'&&password.value=='study.163.com'){
+				loginOff();
+				oPromt.style.display = 'none';
+			}else{
+				oPromt.style.display = 'block';
+				oPromt.innerHTML = '请输入正确的用户名和密码！';
+				alert('用户名：studyOnline 密码：study.163.com')
+			}
+		}
+		function loginOff() {
+			document.getElementById('bg2').style.display ='none';
+			document.getElementById('a-off').style.display='none';
+			document.getElementById('a-on').style.display='block';
+		}
+
+		// 关闭登录框
+		function closeWin(){
+			document.getElementById('bg2').style.display ='none';
+		}
+		
+		//点击关注弹出登录框
+		function loginOpen() {
+			document.getElementById('bg2').style.display ='block';
+		}
+
+		// 取消关注
+		function cancel() {
+			document.getElementById('a-on').style.display='none';
+			document.getElementById('a-off').style.display ='block';
+		}
+	</script>  
+	<script type="text/javascript" src="js/course.js"></script>
+</body>
+</html>
